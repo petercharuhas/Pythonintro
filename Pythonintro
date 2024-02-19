@@ -1,0 +1,65 @@
+any 7:
+for num in nums:
+if num == 7:
+return: True
+
+return False
+
+
+convert:
+if unit_in != "f" and unit_in != "c":
+        return f"Invalid unit {unit_in}"
+
+    if unit_out != "f" and unit_out != "c":
+        return f"Invalid unit {unit_out}"
+
+    if unit_in == "f" and unit_out == "c":
+        temp = (temp - 32) / 9 * 5
+
+    if unit_in == "c" and unit_out == "f":
+        temp = (temp * 5 / 9) + 32
+
+    return temp    
+
+count up:
+while start <= stop:
+        print(start)
+        start = start + 1
+
+
+count_up(5, 7) 
+
+in range:
+ for num in nums:
+        if num >= lowest and num <= highest:
+            print(f"{num} fits")
+sum:
+for num in nums:
+        total = total + num
+
+    return total    
+
+
+print("sum_nums returned", sum_nums([1, 2, 3, 4]))
+words:
+def print_upper_words(words, must_start_with=None):
+    """Print each word on a separate line, uppercased, if it starts with any of the specified letters.
+
+    >>> print_upper_words(["Programming", "is", "pretty", "fun"], must_start_with=None)
+    PROGRAMMING
+    IS
+    PRETTY
+    FUN
+
+    >>> print_upper_words(["eagle", "Edward", "Alfred"], must_start_with=["E"])
+    EAGLE
+    EDWARD
+
+    >>> print_upper_words(["eagle", "Edward", "Alfred", "zope"], must_start_with=["A", "E"])
+    EDWARD
+    ALFRED
+    """
+
+    for word in words:
+        if must_start_with is None or any(word.startswith(letter) for letter in must_start_with):
+            print(word.upper())
